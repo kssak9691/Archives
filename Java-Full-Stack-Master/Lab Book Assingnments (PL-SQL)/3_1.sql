@@ -1,0 +1,16 @@
+CREATE OR REPLACE FUNCTION FINDAGE(
+ DT IN date)
+ RETURN NUMBER IS
+ AGE NUMBER;
+ BEGIN
+ AGE:= ROUND((SYSDATE - DT)/365);
+ RETURN AGE;
+ END;
+/
+--
+select findage('13-MAY-93') from dual
+--
+begin
+	DBMS_OUTPUT.PUT_LINE(FINDAGE('12-May-1993'));
+end;
+/

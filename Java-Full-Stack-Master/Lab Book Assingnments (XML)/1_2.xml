@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailData>
+  <Email>
+	<To></To>
+        <From></From>
+	<CC></CC>
+	<BCC></BCC>
+	<Subject></Subject>
+	<Body></Body>
+  </Email>
+</EmailData>
