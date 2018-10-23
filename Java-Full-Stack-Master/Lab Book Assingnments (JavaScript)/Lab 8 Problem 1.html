@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body>
+<h1>Enter Loan Information:</h1>
+<table>
+<tr>
+<td>1) Amount of the loan (any currency):</td>
+<td><input type="text" name="amount" id="amount" pattern="[1-9]{1}[0-9]{6}"></td>
+</tr>
+
+<tr>
+<td>2) Annual percentage rate of interest:</td>
+<td><input type="text" name="interest" id="interest"></td>
+</tr>
+
+<tr>
+<td>3) Repayment period in years:</td>
+<td><input type="text" name="time" id="time"></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="Compute" onClick="calculatePayment();"></td>
+</tr>
+</table>
+
+<h1>Payment Information:</h1>
+<table>
+<tr>
+<td>4) Your monthly payment will be:</td>
+<td><input type="text" name="x" id="x" disabled></td>
+</tr>
+
+<tr>
+<td>5) Your total payment will be:</td>
+<td><input type="text" name="y" id="y" disabled></td>
+</tr>
+
+<tr>
+<td>6) Your total interest payments will be:</td>
+<td><input type="text" name="z" id="z" disabled></td>
+</tr>
+
+</table>
+
+<script>
+function calculatePayment()
+{
+	var t=parseInt(document.getElementById("time").value);
+	var i=parseInt(document.getElementById("interest").value);
+	var a=parseInt(document.getElementById("amount").value);
+	if(t<7 || t>15)
+	{
+			document.getElementById("time").value="Invalid Period";
+			document.getElementById("x").value="";
+			document.getElementById("y").value="";
+			document.getElementById("z").value="";
+	}
+	else if(a<=0 || a>1500000)
+	{
+			document.getElementById("amount").value="Invalid Amount";
+			document.getElementById("x").value="";
+			document.getElementById("y").value="";
+			document.getElementById("z").value="";
+	}
+	else
+	{
+		var ti=((a*t*i)/100);
+	var s=ti+a;
+	var m=((a*i)/(12*100));
+	
+	document.getElementById("x").value=m;
+	document.getElementById("y").value=s;
+	document.getElementById("z").value=ti;
+	}
+}
+</script>
+
+</body>
+</html>

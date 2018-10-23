@@ -1,0 +1,2 @@
+ALTER TABLE Cust_Table
+ADD  CONSTRAINT CustId_Prim PRIMARY KEY(CustomerId);

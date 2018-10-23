@@ -1,0 +1,1 @@
+SELECT Staff_Name,'$' || LPAD(Staff_sal,15,0) as Salary from Staff_Master;

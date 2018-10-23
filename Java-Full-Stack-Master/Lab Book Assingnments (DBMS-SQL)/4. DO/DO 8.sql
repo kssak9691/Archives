@@ -1,0 +1,2 @@
+ALTER TABLE Cust_Table
+ENABLE  CONSTRAINT CustId_Prim;

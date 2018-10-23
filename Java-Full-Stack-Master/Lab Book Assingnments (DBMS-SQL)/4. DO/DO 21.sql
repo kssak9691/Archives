@@ -1,0 +1,1 @@
+CREATE TABLE AccountDetails AS SELECT * FROM AccountsMaster;

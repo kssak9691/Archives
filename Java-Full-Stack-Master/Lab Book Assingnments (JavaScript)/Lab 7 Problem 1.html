@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body bgcolor="blue">
+<h1>PRODUCTS </h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+<th>Qty</th>
+</tr>
+
+<tr>
+<td>Barbie Doll</td>
+<td>Beautiful</td>
+<td>20</td>
+<td><input type="text" name="barbie" id="barbie"></td>
+</tr>
+
+
+<tr>
+<td>Calculator</td>
+<td>Calculator with latest features</td>
+<td>30</td>
+<td><input type="text" name="cal" id="cal"></td>
+</tr>
+
+<tr>
+<td>Mobile Phone</td>
+<td>Camera,Java,Games,GPRS</td>
+<td>40</td>
+<td><input type="text" name="mobile" id="mobile"></td>
+</tr>
+
+<tr>
+<td>LG DVD</td>
+<td>5 disc changer</td>
+<td>50</td>
+<td><input type="text" name="disc" id="disc"></td>
+</tr>
+
+<tr>
+<td><input type="button" name="order" value="ORDER" id="order" onClick="order();"></td>
+</tr>
+</table>
+
+<script>
+function order(){
+	var c=document.getElementById("cal").value;
+	var m=document.getElementById("mobile").value;
+	var b=document.getElementById("barbie").value;
+	var d=document.getElementById("disc").value;
+	if(c=="" && m=="" && b==""&& d=="")
+	{
+		alert("no item selected");
+	}
+	else if(c!="")
+	{
+		my=open('','hello','width=500,height=500');
+		my.document.write("<html><head><title>Invoice</title></head><body><h1 align='center'>INVOICE</h1><br>");
+		my.document.write("<form><table align='center' border='1'><tr><th>PRODUCT</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL</th></tr><tr><td>Calculator</td><td id='z'></td><td>30</td><td id='z1'></td></tr></table></form></body></html>");
+		my.document.getElementById("z").innerHTML=c;
+		my.document.getElementById("z1").innerHTML=(c*30);
+	}
+	else if(m!="")
+	{
+		my=open('','hello','width=500,height=500');
+		my.document.write("<html><head><title>Invoice</title></head><body><h1 align='center'>INVOICE</h1><br>");
+		my.document.write("<form><table align='center' border='1'><tr><th>PRODUCT</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL</th></tr><tr><td>Mobile Phone</td><td id='p'></td><td>40</td><td id='p1'></td></tr></table></form></body></html>");
+		my.document.getElementById("p").innerHTML=m;
+		my.document.getElementById("p1").innerHTML=(m*40);
+	}
+	else if(b!="")
+	{
+		my=open('','hello','width=500,height=500');
+		my.document.write("<html><head><title>Invoice</title></head><body><h1 align='center'>INVOICE</h1><br>");
+		my.document.write("<form><table align='center' border='1'><tr><th>PRODUCT</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL</th></tr><tr><td>Barbie Doll</td><td id='l'></td><td>20</td><td id='l1'></td></tr></table></form></body></html>");
+		my.document.getElementById("l").innerHTML=b;
+		my.document.getElementById("l1").innerHTML=(b*20);
+	}
+	else if(d!="")
+	{
+		my=open('','hello','width=500,height=500');
+		my.document.write("<html><head><title>Invoice</title></head><body><h1 align='center'>INVOICE</h1><br>");
+		my.document.write("<form><table align='center' border='1'><tr><th>PRODUCT</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL</th></tr><tr><td>LG DVD</td><td id='x'></td><td>50</td><td id='x1'></td></tr></table></form></body></html>");
+		my.document.getElementById("x").innerHTML=d;
+		my.document.getElementById("x1").innerHTML=(d*50);
+	}
+}
+
+</script>
+</body>
+</html>

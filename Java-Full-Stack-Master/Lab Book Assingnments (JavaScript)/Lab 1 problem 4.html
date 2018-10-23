@@ -1,0 +1,21 @@
+<html>
+	<head><title>Embedding Script tag in HTML Document</title>
+		<script>
+			document.write("This text is displayed from the script tag embedded in the Head tag of the document");
+		</script>
+		<script src="Lab 1 Problem 4 (Hello).js">
+		</script>
+	</head>
+	<body>
+		<hr>
+		<script>
+			document.write("<i>This text is displayed from the script tag embedded in the body tag of the document</i>");
+		</script>
+		<hr>
+		<p><code>The actual script is in external script file called "Lab 1 Problem 4 (Hello).js"</code></p>
+		<script>
+			document.write(dispHello());
+		</script>
+		<hr>
+	</body>
+</html>
