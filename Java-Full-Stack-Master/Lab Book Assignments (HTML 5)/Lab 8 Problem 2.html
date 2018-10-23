@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>page title</title>
+<style>
+table{background-color:skyblue}
+ table,tr,th,td{border:1px solid grey}
+</style>
+</head>
+<body>
+<h1 align="center">Candidate Information</h1>
+<form>
+ <table align="center">
+  <tr>
+   <td>Name:<sup style="color:red">*<sup></td>
+   <td><input type="text" pattern="[A-Za-z]+" maxlength="15" title="Accept only characters" required></td>
+  </tr>
+  <tr>
+   <td>Password:<sup style="color:red">*<sup></td>
+   <td><input type="password" required></td>
+  </tr>
+  <tr>
+   <td>Phone number:<sup style="color:red">*<sup></td>
+   <td><input type="text" pattern="[0-9]+" maxlength="10" title="Accepts digits" required></td>
+  </tr>
+  <tr>
+   <td>Gender:<sup style="color:red">*<sup></td>
+   <td><input type="radio" name="Gender">Male<input type="radio" name="Gender" required>Female</td>
+  </tr>
+  <tr>
+   <td>Date of Birth:<sup style="color:red">*<sup></td>
+   <td><input type="date" required></td>
+  </tr>
+  <tr>
+   <td>Email:<sup style="color:red">*<sup></td>
+   <td><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></td>
+  </tr>
+  <tr>
+   <td>Highest Qualification:<sup style="color:red">*<sup></td>
+   <td>
+    <select required>
+	<option value="" disabled selected hidden>Select Highest Qualification</option>
+	 <option>B.Tech</option>
+	 <option>M.Tech</option>
+	 <option>MBA</option>
+	 <option>MCA</option>
+	 <option>MA</option>
+	 <option>BSC</option>
+	</select>
+   </td>
+  </tr>
+  <tr>
+   <td>Courses Interested in:<sup style="color:red">*<sup></td>
+   <td>
+    <input type="checkbox">Java
+	<input type="checkbox">HTML 5
+	<input type="checkbox">CSS 3
+	<input type="checkbox">Angular JS
+	<input type="checkbox">JQuery
+   </td>
+   </tr>
+  <tr>
+   <td>Comments:(Mention External Certifications if any)</td>
+   <td><textarea rows="3" cols="50"></textarea></td>
+  </tr>
+  <tr>
+   <td>Upload Degree/External Certificates<sup style="color:red">*<sup></td>
+   <td><input type="file"></td>
+  </tr>
+  <tr>
+  <td></td>
+  <td>
+   <input type="submit" value="Submit Information">
+   <input type="reset" value="Clear">
+  </td>
+  </tr>
+  
+ </table>
+</form>
+<p style="color:red ;text-align:center">All fields marked (*) are mandatory</p>
+</body>
+</html>
